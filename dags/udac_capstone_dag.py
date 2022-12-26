@@ -34,7 +34,7 @@ default_args = {
 dag = DAG('udac_capstone_dag',
           default_args=default_args,
           description='Load and transform data in Redshift with Airflow',
-          schedule_interval='0 11 2 * *'
+          schedule_interval='0 * * * *'
         )   
  
 def preprocess_weather_data():
