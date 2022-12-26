@@ -11,7 +11,8 @@
 3. [Built with](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#built-with)
 4. [Getting started](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#getting-started)
 5. [Data Model](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#data-model)
-6. [Future requirements](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#future-requirements)
+6. [Data Dictionary](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#data-dictionary)
+7. [Future requirements](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#future-requirements)
 
 ***
 
@@ -47,6 +48,7 @@
 ## ETL flow diagram
 
 ![ETL](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight/blob/main/ETL_flow_diagram.png)
+
 
 ***
 
@@ -117,6 +119,13 @@ The original data set is taken from [Kaggle](https://www.kaggle.com/datasets/pre
 <p>The data model follows star schema; with the central fact table and related dimentional tables in the side.</p>
 
 ![Data Model](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight/blob/main/Data_Model.png)
+
+***
+
+
+## Data Dictionary
+
+
 
 ***
 
