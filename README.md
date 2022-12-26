@@ -125,7 +125,7 @@ The original data set is taken from [Kaggle](https://www.kaggle.com/datasets/pre
 
 ## Data Dictionary
 
-
+Please find the data dictionary attached in the link here: (https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight/blob/main/data_dictionary.md)
 
 ***
 
@@ -141,4 +141,4 @@ The original data set is taken from [Kaggle](https://www.kaggle.com/datasets/pre
 
 - **The database needed to be accessed by 100+ people.**
 
-<p>Since the data warehouse tool that we are using for the dataset is in redshift, If we need to scale the analytics table for broader audience we need to modify the Redshift cluster so that server handles more requests</p>
+<p>Since the data warehouse tool that we are using for the dataset is in redshift, If we need to scale the analytics table for broader audience we need to scale-up the Redshift cluster so that server handles more requests</p>
