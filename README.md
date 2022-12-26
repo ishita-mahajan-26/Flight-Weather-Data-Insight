@@ -40,7 +40,7 @@
 
 ## ETL flow diagram
 
-![alt text](http://url/to/img.png)
+![ETL](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight/blob/main/ETL_flow_diagram.png)
 
 ## Data Sources and their processing
 
@@ -100,7 +100,7 @@
 
 <p>The data model follows star schema; with the central fact table and related dimentional tables in the side.</p>
 
-![alt text](http://url/to/img.png)
+![Data Model](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight/blob/main/Data_Model.png)
 
 ## Future requirements
 
