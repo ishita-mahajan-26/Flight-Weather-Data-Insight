@@ -4,12 +4,12 @@
 
 ## Contents
 
-1. About the project
-2. ETL flow diagram
-3. Built with
-4. Getting started
-5. Data Model
-6. Future requirements
+1. ![About the project](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#about-the-project)
+2. !ETL flow diagram(https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#etl-flow-diagram)
+3. !Built with(https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#built-with)
+4. !Getting started(https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#getting-started)
+5. !Data Model(https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#data-model)
+6. !Future requirements(https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#future-requirements)
 
 ## About the project
 
