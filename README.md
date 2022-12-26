@@ -2,14 +2,18 @@
 
 <p>This project simplifies querying of the flight and weather data for major cities in the US for better analysis of Flight-weather relationship that can be useful for planning a journey.</p>
 
+***
+
 ## Contents
 
-1. ![About the project](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#about-the-project)
-2. !ETL flow diagram(https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#etl-flow-diagram)
-3. !Built with(https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#built-with)
-4. !Getting started(https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#getting-started)
-5. !Data Model(https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#data-model)
-6. !Future requirements(https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#future-requirements)
+1. [About the project](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#about-the-project)
+2. [ETL flow diagram](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#etl-flow-diagram)
+3. [Built with](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#built-with)
+4. [Getting started](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#getting-started)
+5. [Data Model](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#data-model)
+6. [Future requirements](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight#future-requirements)
+
+***
 
 ## About the project
 
@@ -38,9 +42,13 @@
 	9. month-wise flight delays 
 </p>
 
+***
+
 ## ETL flow diagram
 
 ![ETL](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight/blob/main/ETL_flow_diagram.png)
+
+***
 
 ## Data Sources and their processing
 
@@ -66,6 +74,8 @@
 
 </p>
 
+***
+
 ## Built with
 
 - Python
@@ -74,6 +84,8 @@
 - AWS S3 
 - AWS Redshift
 - general conceptual knowledge of IAM users and VPC is also needed.
+
+***
 
 ## Getting started
 
@@ -86,6 +98,8 @@
 
 </p>
 
+***
+
 ## Custom built Operators - Airflow
 
 - **StageToRedshiftOperator** - the operator is present in the python script called "stage_redshift.py". This Operator is used for copying data present as json from S3 into a table present on AWS Redshift
@@ -96,11 +110,15 @@
 
 - **LoadFactOperator** - the operator is present in the python script called "load_fact.py". This Operator is used for copying fact data present in staging table into a fact table present on AWS Redshift
 
+***
+
 ## Data Model
 
 <p>The data model follows star schema; with the central fact table and related dimentional tables in the side.</p>
 
 ![Data Model](https://github.com/ishita-mahajan-26/Flight-Weather-Data-Insight/blob/main/Data_Model.png)
+
+***
 
 ## Future requirements
 
@@ -115,8 +133,3 @@
 - **The database needed to be accessed by 100+ people.**
 
 <p>Since the data warehouse tool that we are using for the dataset is in redshift, If we need to scale the analytics table for broader audience we need to modify the Redshift cluster so that server handles more requests</p>
-
-
-
-
-
