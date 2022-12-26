@@ -31,7 +31,7 @@ default_args = {
     'email_on_retry': False
 }
 
-dag = DAG('udac_capstone_dag_11',
+dag = DAG('udac_capstone_dag',
           default_args=default_args,
           description='Load and transform data in Redshift with Airflow',
           schedule_interval='0 * * * *'
@@ -40,8 +40,6 @@ dag = DAG('udac_capstone_dag_11',
 def preprocess_weather_data():
     logging.info("reading from bucket")
     hook = S3Hook(aws_conn_id='aws_credentials')
-#     bucket = Variable.get('s3_bucket')
-#     prefix = Variable.get('s3_prefix')
     bucket= "udac-flight-weather-dataset"
     prefix1= "Weather/ATL/"
 #     s3_file_path = "s3://udac-flight-weather-dataset/Weather/ATL/2016-1.json"
@@ -88,7 +86,7 @@ def preprocess_weather_data():
     result = pd.merge(datewise_df, hourwise_data_dataframe, on="date")
     logging.info(f" dataframe cols: {result.columns}")
     
-    #use this for testing csv files only
+    #use this for testing the csv file
     result.to_csv('/home/workspace/airflow/new_downloads/2016-1-ATL.csv', 
                   header=True, 
                   index=False)
@@ -97,11 +95,8 @@ def preprocess_weather_data():
                    "Weather/result/ATL/2016-1.csv", 
                    bucket_name='udac-flight-weather-dataset'
                   )
-    #check if loadfile work without locally saving file
-    #if not ensure the file gets deleted after successful s3 load
     
     logging.info("file saved in s3!")
-
     
 
 start_operator = DummyOperator(task_id='Begin_execution', dag=dag)
@@ -172,9 +167,9 @@ run_quality_checks = DataQualityOperator(
     quality_checks = ['table_exists_check', 'table_contains_records_check']
 )
 
-mid_operator = DummyOperator(task_id='mid_step',  dag=dag)
+buffer_operator = DummyOperator(task_id='buffer_step',  dag=dag)
 
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
-start_operator >> preprocess_data_operator >> [stage_flight_data_to_redshift, stage_weather_data_to_redshift ] >> mid_operator >>[load_flight_dimension_table, load_weather_dimension_table, load_location_dimension_table] >> load_flight_weather_fact_table >> run_quality_checks >> end_operator
+start_operator >> preprocess_data_operator >> [stage_flight_data_to_redshift, stage_weather_data_to_redshift ] >> buffer_operator >>[load_flight_dimension_table, load_weather_dimension_table, load_location_dimension_table] >> load_flight_weather_fact_table >> run_quality_checks >> end_operator
 
