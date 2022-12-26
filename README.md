@@ -52,7 +52,7 @@
 
 ## Data Sources and their processing
 
-<p>The original data set is taken from Kaggel: https://www.kaggle.com/datasets/preethgunasekaran/flight-delayweather-dataset</p>
+The original data set is taken from [Kaggle](https://www.kaggle.com/datasets/preethgunasekaran/flight-delayweather-dataset)
 
 <p>As can be seen in the previous image, the pipeline takes the source data from 2 different sources kept in S3, processes the data and makes the data available in AWS Redshift Datawarehouse for analytics. </p>
 
